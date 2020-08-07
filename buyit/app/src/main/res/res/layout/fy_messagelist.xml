@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0FFF0"
+    android:orientation="vertical"
+    android:layout_marginBottom="60dp">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#fff">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/re"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/re"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/re"
+            android:text="调皮的客服"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/config"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_bottom"
+            android:cacheColorHint="@android:color/black"
+            android:divider="@null"
+            android:listSelector="@null"
+            android:transcriptMode="alwaysScroll" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bottom_bg">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/voice"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+            <Button
+                android:id="@+id/btn_send"
+
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_circle_shape"
+                android:fontFamily="sans-serif-black"
+                android:text="发 送"
+                android:textColor="#FCFCFC"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+
+            <EditText
+                android:id="@+id/et_send_msg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/btn_send"
+                android:background="@drawable/textview_circle_item"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                tools:ignore="Autofill,LabelFor,RtlHardcoded,TextFields" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

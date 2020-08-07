@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">sugou</string>
+    <string-array name="welcome">
+        <item>遇见你，真美好</item>
+        <item>客人，听好了。我的名字是薇尔莉特</item>
+        <item>这位客人，我的名字是薇尔莉特</item>
+        <item>请问客人你有什么需要？</item>
+    </string-array>
+</resources>

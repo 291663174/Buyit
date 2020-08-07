@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#F0FFF0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+
+    <RelativeLayout
+        android:id="@+id/modify_email_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageButton
+            android:id="@+id/back_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/back"
+            android:layout_marginRight="6dp"
+            android:layout_marginEnd="6dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/cancel_text"
+            android:text="修改电子邮箱"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back_image_button"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:id="@+id/update_text"
+            android:text="保存"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:layout_width="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="50dp"
+        android:id="@+id/modify_email_edit"
+        android:layout_below="@+id/modify_email_bar">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/youxiangm"
+            android:text="邮箱:"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <!--去掉输入框的下划线，并添加相应提示语给用户-->
+        <EditText
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/youxiangm"
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入邮箱"
+            android:textColor="@android:color/black"
+            tools:ignore="Autofill,HardcodedText,TextFields"
+            android:layout_toRightOf="@+id/youxiangm" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/modify_email_edit"
+        android:text="请输入数字、英文字母以及@等特殊符号混合的正确邮箱！"
+        android:textSize="14dp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+</RelativeLayout>

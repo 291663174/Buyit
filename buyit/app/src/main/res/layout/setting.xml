@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0FFF0"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <RelativeLayout
+        android:id="@+id/setting_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:id="@+id/back_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@mipmap/back"
+            android:layout_marginStart="10dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/back_image_button"
+            android:id="@+id/txt_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="设置"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/back_image_button"
+            tools:ignore="HardcodedText,SpUsage" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/about_us_ry"
+        android:layout_below="@+id/setting_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="-7dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/white"
+            android:text="关于我们"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <Button
+        android:layout_below="@+id/about_us_ry"
+        android:textSize="20dp"
+        android:id="@+id/user_story"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户协议"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <Button
+        android:layout_below="@+id/user_story"
+        android:textSize="20dp"
+        android:id="@+id/check_update"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="检查更新"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <Button
+        android:id="@+id/exit_this"
+        android:layout_below="@+id/check_update"
+        android:textSize="20dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="切换账号"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <Button
+        android:id="@+id/exit_app"
+        android:layout_below="@+id/exit_this"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出app"
+        tools:ignore="HardcodedText,SpUsage" />
+
+</RelativeLayout>

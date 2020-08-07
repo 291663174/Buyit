@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.buyit">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/buyit"
+        android:label="buyit"
+        android:networkSecurityConfig="@xml/network_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,UnusedAttribute">
+        <activity android:name=".pay.zhiwujiaPay" />
+        <activity android:name=".pay.shafaPay" />
+        <activity android:name=".pay.shounahePay" />
+        <activity android:name=".pay.payOnline" />
+        <activity android:name=".pay.dianshiPay" />
+        <activity android:name=".wode.jiemian.faq" />
+        <activity android:name=".wode.jiemian.transactionRecords" />
+        <activity android:name=".wode.jiemian.footPrint" />
+        <activity android:name=".shezhi.tuozhanjiemian.aboutUs" />
+        <activity android:name=".denglu.login" />
+        <activity android:name=".welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dengluhou.sigezhujiemian.mainActivity" />
+        <activity android:name=".yonghu.userInfo" />
+        <activity android:name=".yonghu.xinxigengxin.updateEmail" />
+        <activity android:name=".yonghu.xinxigengxin.updateTelphone" />
+        <activity android:name=".yonghu.xinxigengxin.updateName" />
+        <activity android:name=".shezhi.setting" />
+        <activity android:name=".wode.jiemian.Card" />
+        <activity android:name=".yonghu.xinxigengxin.updateCard" />
+        <activity android:name=".shezhi.tuozhanjiemian.userAgreement" />
+        <activity android:name=".pay.Payed" />
+    </application>
+
+</manifest>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0FFF0"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/shop2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="买它"
+        android:textSize="28sp"
+        android:layout_below="@id/logo"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:text="在线买个够！"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <EditText
+        android:layout_below="@+id/welcome"
+        android:id="@+id/edit_username"
+        android:background="@drawable/bg_white"
+        android:layout_width="match_parent"
+
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:hint="用户名/手机号/邮箱号（8位以上）"
+        android:inputType="text"
+        android:maxLines="1"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <EditText
+        android:layout_below="@+id/edit_username"
+        android:id="@+id/edit_password"
+        android:hint="登录密码（8位以上）"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_white"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_password"
+        android:layout_marginTop="29dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+        <Button
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bg_white"
+            android:text="注册"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/make_sure_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toEndOf="@+id/sign_in_button"
+            android:layout_toRightOf="@+id/sign_in_button"
+            android:background="@drawable/bg_white"
+            android:text="登录"
+            tools:ignore="ButtonStyle,HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

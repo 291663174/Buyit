@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?><!--我的界面-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0FFF0"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+    <!--上层有背景色的部分-->
+
+    <RelativeLayout
+        android:id="@+id/top_info"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#F0FFF0"
+        android:orientation="vertical">
+
+        <!--目前只放了一个右置的设置按钮-->
+        <RadioGroup
+            android:id="@+id/rg_my"
+            android:background="#F0FFF0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            tools:ignore="RtlHardcoded">
+
+            <RadioButton
+                android:id="@+id/rb_s"
+                style="@style/menu_bottom_radiobuttons"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="12dp"
+                android:background="@mipmap/setting" />
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:background="#ffffff"
+            android:layout_centerVertical="true"
+            android:padding="20px"
+            android:layout_width="400dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            tools:ignore="PxUsage,RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/touxiang"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/man"
+                android:layout_centerVertical="true"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <TextView
+                android:layout_toEndOf="@+id/touxiang"
+                android:id="@+id/nicheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/white"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/touxiang" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/nicheng"
+                android:id="@+id/right_to_info"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@mipmap/right"
+                tools:ignore="ContentDescription,RtlHardcoded"
+                android:layout_toRightOf="@+id/nicheng" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/top_info"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:orientation="vertical"
+        tools:ignore="UnknownId">
+
+        <!--list列表底部横线-->
+
+        <ListView
+            android:id="@+id/listview_my_bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/top_info"
+            tools:ignore="MissingPrefix,NotSibling,RtlCompat,RtlHardcoded" />
+
+        <View
+            android:layout_marginLeft="10dp"
+            android:layout_width="400dp"
+            android:layout_height="0.5px"
+            android:background="#DEDEDE"
+            tools:ignore="PxUsage,RtlHardcoded" />
+    </RelativeLayout>
+
+</RelativeLayout>

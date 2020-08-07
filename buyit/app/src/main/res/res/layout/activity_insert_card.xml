@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0FFF0"
+    tools:context=".insertCard">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:background="#F0FFF0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_image_button"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/new_card"
+            android:text="保存"
+            android:textSize="20dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F0FFF0"
+        android:text="请输入银行卡号"
+        android:textColor="@android:color/black"
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:background="#F0FFF0"
+        android:layout_width="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:text="持卡人"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edit_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/man"
+            android:background="@null"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:id="@+id/attention"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/attention"
+            android:layout_alignParentRight="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:background="#F0FFF0"
+        android:layout_marginTop="5dp"
+        android:layout_width="400dp"
+        android:layout_height="0.5px"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:background="#F0FFF0"
+        android:layout_width="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/card"
+            android:background="#F0FFF0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="卡    号"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/edit_card_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/card"
+            android:background="@null"
+            android:hint="转账提现免手续费"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/card"
+        android:background="@null"
+        android:hint="请输入19位数银行卡！"
+        android:textSize="22dp" />
+
+</LinearLayout>

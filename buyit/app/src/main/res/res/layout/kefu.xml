@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/qq_bg"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/qq_logo"
+        android:background="@mipmap/qq"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title"
+        android:text="官方客服"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/qq_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/qq_number"
+        android:textIsSelectable="true"
+        android:background="@drawable/qq_bg"
+        android:text="QQ号：959536195"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:text="复制客服QQ号"
+        android:layout_marginTop="15dp"
+        android:id="@+id/copy"
+        android:background="@drawable/copy_bg"
+        android:layout_below="@+id/qq_number"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

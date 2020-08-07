@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>   <!--主界面框架，采用相对布局-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0FFF0"
+    android:orientation="vertical">
+
+    <!--底部导航栏-->
+    <RadioGroup
+        android:background="#F0FFF0"
+        android:id="@+id/rg_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!--style为底部的导航栏样式-->
+        <RadioButton
+            android:id="@+id/rb_1"
+            style="@style/menu_bottom_radiobuttons"
+            android:textColor="@android:color/black"
+            android:background="#F0FFF0"
+            android:drawableTop="@drawable/home_pressed"
+            android:text="首页"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:textColor="@android:color/black"
+            style="@style/menu_bottom_radiobuttons"
+            android:drawableTop="@drawable/gupiao_pressed"
+            android:text="积分"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_3"
+            android:textColor="@android:color/black"
+            style="@style/menu_bottom_radiobuttons"
+            android:drawableTop="@drawable/xiaoxi_pressed"
+            android:text="消息"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            android:textColor="@android:color/black"
+            style="@style/menu_bottom_radiobuttons"
+            android:drawableTop="@drawable/my_pressed"
+            android:text="我的"
+            tools:ignore="HardcodedText" />
+
+    </RadioGroup>
+
+    <!--框架布局或者叫帧布局,分4个框架获取界面-->
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

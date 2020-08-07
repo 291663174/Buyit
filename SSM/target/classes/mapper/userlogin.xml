@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 与com.ibuyi.ssm.dao.UserLoginDAO 动态绑定-->
+<mapper namespace="com.ibuyi.ssm.dao.UserLoginDAO">
+    <!--实现登录验证-->
+    <select id="userLogin" parameterType="String" resultType="com.ibuyi.ssm.bean.UserLogin">
+       select * from userlogin where userAccount=#{param1} and userPwd=#{param2}
+   </select>
+
+    <!--实现注册验证-->
+    <insert id="userRegister" parameterType="String">
+        insert into userlogin(userAccount,userPwd,userName,userGender,userEmail,userPhoneNumber)
+        values(#{param1},#{param2},#{param3},#{param4},#{param5},#{param6})
+    </insert>
+
+    <!--实现查找用户账号的相关数据-->
+    <select id="findUserAll" parameterType="String" resultType="com.ibuyi.ssm.bean.UserLogin">
+        select * from userlogin where userAccount=#{param1}
+    </select>
+
+    <!--实现更新用户银行卡号-->
+    <update id="updateCard" parameterType="String">
+        update userlogin set userCardNumber = #{param1} where userName = #{param2}
+    </update>
+
+    <!--实现更新用户昵称-->
+    <update id="updateName" parameterType="String">
+        update userlogin set userName = #{param1} where userAccount = #{param2}
+    </update>
+
+    <!--实现更新用户电话号码-->
+   <update id="updatePhoneNumber" parameterType="String">
+        update userlogin set userPhoneNumber = #{param1} where userAccount = #{param2}
+    </update>
+
+    <!--实现更新用户电子邮箱-->
+    <update id="updateEmail" parameterType="String">
+        update userlogin set userEmail = #{param1} where userAccount = #{param2}
+    </update>
+</mapper>
